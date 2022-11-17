@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_chip_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#82B1FF">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ghibli_logo"
+            tools:ignore="ContentDescription" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/gallery_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/chip_gallery"
+        android:textAlignment="center"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/txt_chip_filter_by"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/filter_by"
+        android:textSize="15sp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cg_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_cat_cpu"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/cpu"
+            android:textAlignment="center"
+            app:chipIcon="@drawable/chip_icon"
+            app:iconStartPadding="3dp"
+            app:layout_constraintEnd_toStartOf="@+id/chip_cat_gpu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_cat_gpu"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="@string/gpu"
+            android:textAlignment="center"
+            app:chipIcon="@drawable/chip_icon"
+            app:iconStartPadding="3dp"
+            app:layout_constraintEnd_toStartOf="@+id/chip_cat_cpu3"
+            app:layout_constraintStart_toEndOf="@+id/chip_cat_cpu"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_cat_cpu3"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="@string/dram"
+            android:textAlignment="center"
+            app:chipIcon="@drawable/chip_icon"
+            app:iconStartPadding="3dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/chip_cat_cpu4"
+            app:layout_constraintStart_toEndOf="@+id/chip_cat_gpu"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_cat_cpu4"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/io"
+            android:textAlignment="center"
+            app:chipIcon="@drawable/chip_icon"
+            app:iconStartPadding="3dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/chip_cat_cpu3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/txt_chip_sort_by"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/sort_by"
+        android:textSize="15sp" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:singleSelection="true"
+        android:textAlignment="center"
+        android:id="@+id/cg_sort">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_sort_time_dscnd"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/latest_to_oldest"
+            android:textAlignment="center"
+            app:chipIcon="@drawable/chip_icon"
+            app:iconStartPadding="3dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_sort_trans_cnt_ascnd"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/increasing_transistor_count"
+            android:textAlignment="center"
+            app:chipIcon="@drawable/chip_icon"
+            app:iconStartPadding="3dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_sort_time_ascnd"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/oldest_to_latest"
+            android:textAlignment="center"
+            app:chipIcon="@drawable/chip_icon"
+            app:iconStartPadding="3dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_sort_trans_cnt_dscnd"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/decreasing_transistor_count"
+            android:textAlignment="center"
+            app:chipIcon="@drawable/chip_icon"
+            app:iconStartPadding="3dp" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/id_rv_chip_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
