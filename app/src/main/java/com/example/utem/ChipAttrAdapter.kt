@@ -21,7 +21,7 @@ class ChipAttrAdapter (private val context: Context, ChipAttrModelArrayList: Arr
         // to set data to textview and imageview of each card layout
         val model: ChipAttrModel = ChipAttrModelArrayList[position]
         holder.chip_attr.setText(model.getChipAttr())
-        holder.chip_val.setText(model.getChipAttr())
+        holder.chip_val.setText(model.getChipVal())
     }
 
     override fun getItemCount(): Int {

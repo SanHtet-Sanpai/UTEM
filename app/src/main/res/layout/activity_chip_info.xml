@@ -43,32 +43,32 @@
 
     </androidx.viewpager.widget.ViewPager>
 
+    <TextView
+        android:id="@+id/chip_about_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="150dp">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/chip_about_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="About"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
+            android:orientation="vertical" >
 
             <TextView
                 android:id="@+id/chip_about_body"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
                 android:text="@string/dummy_about_body"
                 android:textAlignment="center"
-                android:textSize="15sp"
-                android:layout_margin="2dp"/>
+                android:textSize="15sp" />
         </LinearLayout>
     </ScrollView>
 
@@ -79,12 +79,14 @@
         android:text="Specs"
         android:textAlignment="center"
         android:textSize="20sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:layout_margin="10dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/id_rv_chip_specs"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"/>
 
 
 </LinearLayout>
