@@ -9,6 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 
 class ChipAdapter(private val context: Context, ChipModelArrayList: ArrayList<ChipModel>) :
     RecyclerView.Adapter<ChipAdapter.Viewholder>() {
+
+    var onItemClick: ( (ChipModel) -> Unit)? = null
     private val ChipModelArrayList: ArrayList<ChipModel>
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChipAdapter.Viewholder {
         // to inflate the layout for each item of recycler view.
@@ -21,6 +23,9 @@ class ChipAdapter(private val context: Context, ChipModelArrayList: ArrayList<Ch
         val model: ChipModel = ChipModelArrayList[position]
         holder.chip_name.setText(model.getChip_name())
         holder.chip_thumbnail.setImageResource(model.getChip_thumbnail())
+        holder.itemView.setOnClickListener{
+                onItemClick?.invoke(model)
+        }
     }
 
     override fun getItemCount(): Int {

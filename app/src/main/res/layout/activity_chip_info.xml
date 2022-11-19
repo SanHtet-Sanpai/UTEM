@@ -25,6 +25,15 @@
             tools:ignore="ContentDescription" />
     </com.google.android.material.appbar.AppBarLayout>
 
+    <TextView
+        android:id="@+id/chip_info_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="tv_chip_name"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/idViewPager"
         android:layout_width="match_parent"

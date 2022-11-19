@@ -3,6 +3,7 @@ package com.example.utem
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -55,6 +56,13 @@ class ChipInfo : AppCompatActivity() {
         // in below two lines we are setting layoutmanager and adapter to our recycler view.
         chipAttrRV.layoutManager = LinearLayoutManager(this)
         chipAttrRV.adapter = chipAttrAdapter
+
+        val chip = intent.getParcelableExtra<ChipModel>("chip")
+        if (chip != null){
+            val textView: TextView = findViewById(R.id.chip_info_title)
+
+            textView.text = chip.getChip_name()
+        }
     }
 
 }

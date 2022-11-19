@@ -38,6 +38,11 @@ class ChipGalleryHome : AppCompatActivity() {
         // in below two lines we are setting layoutmanager and adapter to our recycler view.
         chipRV.layoutManager = GridLayoutManager(this, 2)
         chipRV.adapter = chipAdapter
+        chipAdapter.onItemClick = {
+            val intent =  Intent(this,ChipInfo::class.java)
+            intent.putExtra("chip",it)
+            startActivity(intent)
+        }
     }
 }
 
