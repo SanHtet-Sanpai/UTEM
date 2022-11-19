@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_chip_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#82B1FF">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ghibli_logo"
+            tools:ignore="ContentDescription" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/idViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_margin="15dp" >
+
+    </androidx.viewpager.widget.ViewPager>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/chip_about_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="About"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/chip_about_body"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="@string/dummy_about_body"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                android:layout_margin="2dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/chip_table_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Specs"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/id_rv_chip_specs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>

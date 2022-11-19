@@ -11,5 +11,8 @@
     <string name="increasing_transistor_count">Increasing Transistor Count</string>
     <string name="oldest_to_latest">Oldest to Latest</string>
     <string name="latest_to_oldest">Latest to Oldest</string>
-    <string name="chip_name"/>
+    <string name="chip_name" />
+    <string name="dummy_about_body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</string>
+    <string name="attr"/>
+    <string name="value"/>
 </resources>
